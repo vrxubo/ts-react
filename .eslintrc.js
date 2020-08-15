@@ -12,9 +12,14 @@ module.exports = {
     'plugin:unicorn/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    'prettier/unicorn',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    project: './tsconfig.eslint.json',
     ecmaFeatures: {
       jsx: true,
     },
@@ -24,7 +29,7 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'promise', 'unicorn'],
   rules: {
     'import/extensions': [
-      ERROR,
+      2,
       'ignorePackages',
       {
         ts: 'never',
@@ -37,9 +42,8 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.tsx', '.ts', '.js', '.json'],
+        extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
       },
     },
   },
 };
-

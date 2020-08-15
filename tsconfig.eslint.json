@@ -1,0 +1,18 @@
+{
+  // extend your base config so you don't have to redefine your compilerOptions
+  "extends": "./tsconfig.json",
+  "include": [
+    "*.ts",
+    "*.js",
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "typings/**/*.ts",
+    // etc
+
+    // if you are going to parse JS files
+    "src/**/*/.js",
+    "src/**/*/.tsx",
+    "src/**/*/.jsx"
+    // etc
+  ]
+}
